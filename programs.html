@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Programs – Market Robotics Learning for Kids</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <header class="header" role="banner">
+      <div class="logo" aria-label="Site Logo">
+        <svg role="img" aria-labelledby="logoTitle logoDesc" viewBox="0 0 128 128">
+          <title id="logoTitle">DH Logo</title>
+          <desc id="logoDesc">Rounded square with letters D and H for Deuel Hunte.</desc>
+          <rect x="4" y="4" width="120" height="120" rx="22" fill="#1f6feb"/>
+          <text x="50%" y="56%" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="44" fill="#ffffff">DH</text>
+        </svg>
+        <div class="title">Market Robotics Learning for Kids</div>
+      </div>
+      <p class="sub">From my understanding, this site markets robotics learning for kids (ages 8–14) with clear programs, resources, and registration.</p>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="programs.html" aria-current="page">Programs</a>
+        <a href="resources.html">Resources</a>
+        <a href="register.html">Register</a>
+      </nav>
+    </header>
+
+    <main class="card" role="main">
+      <h2>Programs</h2>
+      <p>Filter by age range to see the best fit. I built a client-side filter to update cards and announce a result count.</p>
+      <div class="controls">
+        <label for="ageFilter">Choose age range:</label>
+        <select id="ageFilter" aria-describedby="resultsCount">
+          <option value="8-10">8–10</option>
+          <option value="10-12" selected>10–12</option>
+          <option value="12-14">12–14</option>
+        </select>
+        <span id="resultsCount" class="notice" aria-live="polite"></span>
+      </div>
+
+      <div class="programs">
+        <article class="program" data-age="8-10">
+          <h3>Discovery Bots</h3>
+          <p class="meta">Ages 8–10 · Beginner</p>
+          <p>Build simple robots with block-based coding—focus on fun and fundamentals.</p>
+        </article>
+
+        <article class="program" data-age="10-12">
+          <h3>Explorer Robotics</h3>
+          <p class="meta">Ages 10–12 · Intermediate</p>
+          <p>Move from blocks to real code; add sensors and simple AI behaviors.</p>
+        </article>
+
+        <article class="program" data-age="12-14">
+          <h3>Prototyper Lab</h3>
+          <p class="meta">Ages 12–14 · Advanced</p>
+          <p>Design, test, and iterate prototypes; teamwork and mini challenges.</p>
+        </article>
+      </div>
+
+      <h2 style="margin-top:18px">FAQ</h2>
+      <details class="faq">
+        <summary>What should my child bring?</summary>
+        <p>We provide kits. Your child can bring a water bottle and curiosity!</p>
+      </details>
+      <details class="faq">
+        <summary>Do you offer scholarships?</summary>
+        <p>Yes—limited scholarships are available. Ask on the register page.</p>
+      </details>
+      <details class="faq">
+        <summary>Are beginners welcome?</summary>
+        <p>Absolutely. We start with fundamentals and grow from there.</p>
+      </details>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div>© 2025 Deuel Hunte · Built for my Course Website Project</div>
+    </footer>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>

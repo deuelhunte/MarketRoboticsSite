@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Register – Market Robotics Learning for Kids</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <header class="header" role="banner">
+      <div class="logo" aria-label="Site Logo">
+        <svg role="img" aria-labelledby="logoTitle logoDesc" viewBox="0 0 128 128">
+          <title id="logoTitle">DH Logo</title>
+          <desc id="logoDesc">Rounded square with letters D and H for Deuel Hunte.</desc>
+          <rect x="4" y="4" width="120" height="120" rx="22" fill="#1f6feb"/>
+          <text x="50%" y="56%" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="44" fill="#ffffff">DH</text>
+        </svg>
+        <div class="title">Market Robotics Learning for Kids</div>
+      </div>
+      <p class="sub">From my understanding, this site markets robotics learning for kids (ages 8–14) with clear programs, resources, and registration.</p>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="resources.html">Resources</a>
+        <a href="register.html" aria-current="page">Register</a>
+      </nav>
+    </header>
+
+    <main class="card" role="main">
+      <h2>Register</h2>
+      <p>Fill out the form. I included client-side validation and an HTTPS action endpoint.</p>
+
+      <!-- If you want a guaranteed redirect to success.html after Formspree, add:
+      <input type="hidden" name="_redirect" value="https://<your-username>.github.io/<your-repo>/MarketRoboticsSite/success.html">
+      -->
+      <form id="registerForm" action="https://formspree.io/f/myzkjveq" method="POST" novalidate>
+        <div class="form-grid">
+          <div>
+            <label for="parentName">Parent/Guardian Name *</label>
+            <input id="parentName" name="parentName" type="text" required aria-describedby="errParent">
+            <div id="errParent" class="error" hidden></div>
+          </div>
+
+          <div>
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" required aria-describedby="errEmail">
+            <div id="errEmail" class="error" hidden></div>
+          </div>
+
+          <div>
+            <label for="childAge">Child Age (5–18) *</label>
+            <input id="childAge" name="childAge" type="number" min="5" max="18" required aria-describedby="errAge">
+            <div id="errAge" class="error" hidden></div>
+          </div>
+
+          <div>
+            <label for="program">Program *</label>
+            <select id="program" name="program" required aria-describedby="errProgram">
+              <option value="">Select a program</option>
+              <option>Discovery Bots (8–10)</option>
+              <option>Explorer Robotics (10–12)</option>
+              <option>Prototyper Lab (12–14)</option>
+            </select>
+            <div id="errProgram" class="error" hidden></div>
+          </div>
+
+          <div style="grid-column:1/-1">
+            <label for="notes">Notes (allergies, schedule, goals)</label>
+            <textarea id="notes" name="notes" rows="3"></textarea>
+          </div>
+
+          <div style="grid-column:1/-1">
+            <label><input id="consent" name="consent" type="checkbox" required aria-describedby="errConsent"> I consent to submit this information for class purposes *</label>
+            <div id="errConsent" class="error" hidden></div>
+          </div>
+        </div>
+
+        <p class="success" aria-live="polite">Tip: If your instructor requires a local success page, I also included <code>success.html</code>. Formspree may show its own confirmation.</p>
+
+        <div style="display:flex;gap:8px;margin-top:10px">
+          <button class="btn brand" type="submit">Submit</button>
+          <button class="btn ghost" type="reset">Reset</button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div>© 2025 Deuel Hunte · Built for my Course Website Project</div>
+    </footer>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
